@@ -45,11 +45,11 @@ var seneca = require('seneca')()
 seneca.use(require('seneca-pubsub'))
 
 seneca.subscribe({role: 'foo'}, function (msg) {
-  console.log(msg.value)    
+  console.log(msg.data.value)    
 })
 
 seneca.subscribe({role: 'foo'}, function (msg) {
-  console.log(msg.value)    
+  console.log(msg.data.value)    
 })
 
 seneca.publish({role: 'foo', data: {value: 10}})
