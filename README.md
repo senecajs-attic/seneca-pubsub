@@ -41,20 +41,20 @@ npm run test
 
 ```js
 
-Var Seneca = require('seneca')()
-Seneca.use(require('seneca-pubsub'))
+var seneca = require('seneca')()
+seneca.use(require('seneca-pubsub'))
 
-Seneca.subscribe({role: 'foo', function (msg) {
+seneca.subscribe({role: 'foo'}, function (msg) {
   console.log(msg.value)    
 })
 
-Seneca.subscribe({role: 'foo', function (msg) {
+seneca.subscribe({role: 'foo'}, function (msg) {
   console.log(msg.value)    
 })
 
-Seneca.publish({role: 'foo', data: {value: 10}})
-Seneca.publish({role: 'foo', data: {value: 10}})
-Seneca.publish({role: 'foo', data: {value: 10}})
+seneca.publish({role: 'foo', data: {value: 10}})
+seneca.publish({role: 'foo', data: {value: 10}})
+seneca.publish({role: 'foo', data: {value: 10}})
 
 // Output x6: '10'
 ```
