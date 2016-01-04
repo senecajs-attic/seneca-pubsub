@@ -5,13 +5,12 @@
 # seneca-pubsub
 [![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
+[![Coverage Status][coveralls-badge]][coveralls-url]
+[![Dependency Status][david-badge]][david-url]
 [![Gitter][gitter-badge]][gitter-url]
 
-A decoration that adds pub sub via varo to Seneca
+A decoration that adds pub sub via [varo][] to [Seneca][]
 
-- __Tested on:__ Seneca 0.9
-- __Node:__ 4, 5
-- __License:__ [MIT][]
 
 If you're using this module, and need help, you can:
 
@@ -42,20 +41,20 @@ npm run test
 
 ```js
 
-Var Seneca = require('seneca')()
-Seneca.use(require('seneca-pubsub'))
+var seneca = require('seneca')()
+seneca.use(require('seneca-pubsub'))
 
-Seneca.subscribe({role: 'foo', function (msg) {
+seneca.subscribe({role: 'foo'}, function (msg) {
   console.log(msg.value)    
 })
 
-Seneca.subscribe({role: 'foo', function (msg) {
+seneca.subscribe({role: 'foo'}, function (msg) {
   console.log(msg.value)    
 })
 
-Seneca.publish({role: 'foo', data: {value: 10}})
-Seneca.publish({role: 'foo', data: {value: 10}})
-Seneca.publish({role: 'foo', data: {value: 10}})
+seneca.publish({role: 'foo', data: {value: 10}})
+seneca.publish({role: 'foo', data: {value: 10}})
+seneca.publish({role: 'foo', data: {value: 10}})
 
 // Output x6: '10'
 ```
@@ -69,14 +68,19 @@ Copyright (c) 2015, Dean McDonnell and other contributors.
 Licensed under [MIT][].
 
 [MIT]: ./LICENSE
-[npm-badge]: https://badge.fury.io/js/seneca-pubsub.svg
-[npm-url]: https://badge.fury.io/js/seneca-pubsub
+[npm-badge]: https://img.shields.io/npm/v/seneca-pubsub.svg
+[npm-url]: https://npmjs.com/package/seneca-pubsub
+[Seneca]: https://github.com/senecajs/seneca
 [Senecajs org]: https://github.com/senecajs/
 [Seneca.js]: https://www.npmjs.com/package/seneca
 [@senecajs]: http://twitter.com/senecajs
 [senecajs.org]: http://senecajs.org/
-[travis-badge]: https://travis-ci.org/senecajs/seneca-pubsub.svg
+[travis-badge]: https://api.travis-ci.org/senecajs/seneca-pubsub.svg
 [travis-url]: https://travis-ci.org/senecajs/seneca-pubsub
+[coveralls-badge]:https://coveralls.io/repos/senecajs/seneca-pubsub/badge.svg?branch=master&service=github
+[coveralls-url]: https://coveralls.io/github/senecajs/seneca-pubsub?branch=master
+[david-badge]: https://david-dm.org/senecajs/seneca-pubsub.svg
+[david-url]: https://david-dm.org/senecajs/seneca-pubsub
 [gitter-badge]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/senecajs/seneca
 [github issue]: https://github.com/senecajs/seneca-pubsub/issues
