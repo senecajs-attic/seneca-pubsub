@@ -9,7 +9,7 @@
 [![Dependency Status][david-badge]][david-url]
 [![Gitter][gitter-badge]][gitter-url]
 
-A decoration that adds pub sub via [varo][] to [Seneca][]
+A decoration that adds pub sub via [Varo][] to [Seneca][]
 
 
 If you're using this module, and need help, you can:
@@ -71,6 +71,7 @@ Licensed under [MIT][].
 [npm-badge]: https://img.shields.io/npm/v/seneca-pubsub.svg
 [npm-url]: https://npmjs.com/package/seneca-pubsub
 [Seneca]: https://github.com/senecajs/seneca
+[Varo]: https://github.com/senecajs/varo
 [Senecajs org]: https://github.com/senecajs/
 [Seneca.js]: https://www.npmjs.com/package/seneca
 [@senecajs]: http://twitter.com/senecajs
