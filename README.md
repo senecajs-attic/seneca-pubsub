@@ -1,6 +1,6 @@
 
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
-> A [Seneca.js][] data storage plugin.
+> A [Seneca.js][] pubsub plugin.
 
 # seneca-pubsub
 [![npm version][npm-badge]][npm-url]
